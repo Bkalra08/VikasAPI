@@ -20,6 +20,8 @@ public class MainController  {
 	private serviceClass Service;
 
 	
+	
+	
 	@PostMapping("/AddData")
 	public Details addSHGDetails(@RequestBody Details details) {
 		return this.Service.addSHGDetails(details);
