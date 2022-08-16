@@ -15,6 +15,7 @@ public class serviceClass implements serviceinterface {
 	
 	@Autowired
 	private DAOlayer daolayer;
+	
 
 
 	@Override
@@ -27,5 +28,23 @@ public class serviceClass implements serviceinterface {
 	public Details getDetails(int SHGId) {
 		return daolayer.findById(SHGId);
 	}
+
+	@Override
+	public void DeleteSHGData(int SHGId) {
+		daolayer.deleteById(SHGId);
+		
+	}
+
+	@Override
+	public Details findById(int SHGId) {
+		
+		return daolayer.findById(SHGId);
+	}
+
+//	@Override
+//	public void DeleteSHGData(int SHGId) {
+//		daolayer.deleteById(SHGId);
+//		
+//	}
 
 }

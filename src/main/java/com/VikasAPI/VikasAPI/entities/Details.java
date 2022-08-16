@@ -10,6 +10,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Document(collection = "UserData")
+//@Document(collection = "UserDatatesting")
 @Getter
 @Setter
 @ToString
@@ -21,15 +22,12 @@ public class Details {
 	
 	@Id
 	private Integer SHGId;
-	
-	
 	private String name;
 	private String age;
-	private String gender ;
 	private String SHGName;
 	private String aadharnumber;
-	private String category;
 	private String monthlyincome;
+	private String bankname;
 	private String bankaccountnumber;
 	
 
