@@ -16,10 +16,16 @@ public class serviceClass implements serviceinterface {
 	@Autowired
 	private DAOlayer daolayer;
 
+
 	@Override
 	public Details addSHGDetails(Details details) {
 		daolayer.save(details);
 		return details;
+	}
+
+	@Override
+	public Details getDetails(int SHGId) {
+		return daolayer.findById(SHGId);
 	}
 
 }
