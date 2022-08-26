@@ -1,5 +1,7 @@
  package com.VikasAPI.VikasAPI.entities;
 
+import java.util.*;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -29,6 +31,9 @@ public class Details {
 	private String monthlyincome;
 	private String bankname;
 	private String bankaccountnumber;
-	
+	private Integer Transaction;
+	private String photo64;
+	private Date date;
+//	private Time time;
 
 }

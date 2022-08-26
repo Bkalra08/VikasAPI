@@ -24,10 +24,6 @@ public class serviceClass implements serviceinterface {
 		return details;
 	}
 
-	@Override
-	public Details getDetails(int SHGId) {
-		return daolayer.findById(SHGId);
-	}
 
 	@Override
 	public void DeleteSHGData(int SHGId) {
@@ -41,10 +37,29 @@ public class serviceClass implements serviceinterface {
 		return daolayer.findById(SHGId);
 	}
 
+
+	@Override
+	public Details getDetails(int SHGId) {
+		return daolayer.findById(SHGId);
+	}
+
+	@Override
+	public Details putDetails(Details detail) {
+		daolayer.save(detail);
+		return detail;
+	}
+//
 //	@Override
-//	public void DeleteSHGData(int SHGId) {
-//		daolayer.deleteById(SHGId);
-//		
+//	public void updateDetails(int SHGId) {
+//		daolayer.save(SHGId);
+//			}
+
+
+//	@Override
+//	public Details UploadIMG(int SHGId) {
+//		return daolayer.save(Details.getPhoto64());
 //	}
+
+
 
 }
